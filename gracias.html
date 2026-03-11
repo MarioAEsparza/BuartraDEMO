@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BUARTRA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" media="all">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Simbolo-Positivo.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        /* Imagen de fondo única y completa */
+        .full-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("images/imagendef1\ copia.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: grayscale(100%) brightness(0.6);
+            /* Ajuste de contraste para legibilidad */
+            z-index: 1;
+        }
+
+        /* Capa de contenido */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 90%;
+            max-width: 450px;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* Contenedor del Input */
+        .code-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .code-container label {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .code-input {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 12px 20px;
+            width: 200px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            outline: none;
+        }
+
+        /* Opcional: Pequeña sombra al input para resaltar  <div class="date">11/02/2025</div>*/
+.code-input:focus {
+            /* box-shadow eliminado para quitar el halo blanco */
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .submit-btn {
+            color: black;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #a0a0a0;
+        }
+
+        .back-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 12px 30px;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="full-background"></div>
+
+    <main class="content" style="color: white;">
+        <img src="images/Horizontal_Positivo.png" alt="BÚARTRA" class="logo">
+        <p class="message" style="color: #fff; font-family: 'Outfit', sans-serif; font-weight: 400;">
+            Gracias por confiar en nosotras.<br>
+            Pronto recibirás más información.
+        </p>
+        <div class="btn-container">
+            <button type="button" class="back-btn" onclick="window.location.href='index.html'">
+                <span style="transform: rotate(135deg); display: inline-block; font-size: 24px;">→</span> VOLVER
+            </button>
+        </div>
+    </main>
+
+</body>
+
+</html>

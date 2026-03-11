@@ -1,0 +1,871 @@
+/* Registrar fuente Black para títulos muy gordos */
+@font-face {
+    font-family: 'MADE Okine Sans Black';
+    src: url('/fonts/MADEOkineSansPERSONALUSE-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+/* Responsive para el título principal y flecha en formulario */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+    .arrow img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.08;
+    }
+    .arrow img {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .btn-container {
+        flex-direction: column-reverse;
+    }
+}
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (min-width: 601px) {
+    .btn-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .btn-container .submit-btn {
+        order: 2;
+    }
+    .btn-container .back-btn {
+        order: 1;
+    }
+}
+.arrow {
+        margin-bottom: -20px;
+}
+
+.arrow img {
+    width: 20px;
+    height: 40px;
+    max-width: 100%;
+    transition: width 0.2s, height 0.2s;
+}
+
+@media (max-width: 600px) {
+    .arrow img {
+        width: 22px !important;
+        height: 22px !important;
+    }
+    .arrow {
+        margin-bottom: -4px;
+    }
+}
+
+/* Responsive: flecha más pequeña en móviles */
+@media (max-width: 600px) {
+    .arrow img {
+        width: 1px !important;
+        height: 1px !important;
+    }
+    .arrow {
+        margin-bottom: -4px;
+    }
+}
+/* Animación flecha en botón de envío */
+/* Animación flecha en botón de envío: movimiento y giro */
+.arrow-anim {
+    transition: transform 0.35s cubic-bezier(.4,1.6,.6,1);
+}
+
+.hero-form button:hover .arrow-anim,
+form.hero-form button:hover .arrow-anim {
+    transform: rotate(-45deg);
+}
+/* Info lateral en hero */
+.hero-side-info {
+    position: absolute;
+    top: 77%;
+    left: 0;
+    width: 340px;
+    max-width: 40vw;
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-family: 'Outfit', sans-serif;
+    background: rgba(0,0,0,0.32);
+    padding: 18px 22px 18px 32px;
+    border-radius: 0 18px 18px 0;
+    z-index: 3;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+        word-break: break-word;
+}
+
+@media (max-width: 900px) {
+    .hero-side-info {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+        border-radius: 0;
+        padding: 10px 4vw 10px 4vw;
+        font-size: 1rem;
+        box-shadow: none;
+        background: none;
+        color: #fff;
+        text-align: left;
+    }
+}
+.form-consent-wrap.form-consent-formulario {
+    color: #fff;
+    text-align: left;
+}
+.form-consent-formulario .form-consent {
+    color: #fff;
+    opacity: 0.85;
+    font-size: 0.55rem;
+    line-height: 1.12;
+    max-width: 520px;
+    margin-top: 8px;
+    text-align: left !important;
+    display: block;
+    margin-left: 0;
+}
+.form-consent-wrap.form-consent-hero {
+    color: #fff;
+}
+.form-consent-hero .form-consent {
+    color: #fff;
+    opacity: 0.85;
+}
+/* =====================
+   FUENTES
+===================== */
+
+/* Marquee styles */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    margin: 0 auto 24px auto;
+}
+
+    .marquee {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #222;
+        animation: marquee 60s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsive para marquee en tablets */
+@media (max-width: 1024px) {
+    .marquee {
+        font-size: 1.7rem;
+        animation: marquee 48s linear infinite;
+    }
+    .marquee-container {
+        border-top: 1.5px solid #222;
+        border-bottom: 1.5px solid #222;
+    }
+}
+
+/* Responsive para marquee en móviles */
+@media (max-width: 600px) {
+    .marquee {
+        font-size: 1.3rem;
+        animation: marquee 36s linear infinite;
+    }
+    .marquee-container {
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #222;
+        margin: 0 auto 16px auto;
+    }
+}
+
+/* Outfit – Texto general (variable) */
+@font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* MADE Okine Sans – Títulos */
+@font-face {
+    font-family: 'MADE Okine Sans';
+    src: url('/fonts/MADEOkineSansPERSONALUSE-Medium.otf') format('opentype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'MADE Okine Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 177.77vh;
+    /* 16:9 */
+    min-height: 56.25vw;
+    /* 16:9 */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    /* Padding reducido para disminuir espacios en blanco */
+    padding: 40px 60px;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-overlay>* {
+    max-width: 700px;
+} 
+
+.hero-text {
+    position: absolute;
+    top: 12%; /* desplazado hacia abajo para reducir espacio superior */
+    left: 80px;
+    /* Evitar que el texto toque los bordes: ancho máximo relativo y padding responsivo */
+    width: min(900px, calc(100% - 160px));
+    padding-inline: clamp(16px, 4vw, 80px);
+    box-sizing: border-box;
+    max-width: none;
+} 
+
+.hero-register {
+    position: absolute;
+    bottom: 60px; /* menor separación del borde inferior */
+    right: 50px;
+} 
+
+.hero-register small {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Estilo para el texto de marca BÚARTRA: tamaño e interletrado responsive */
+.hero-register strong {
+    font-family: 'MADE Okine Sans', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.0rem, 2.8vw, 2rem);
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+    .hero-register strong {
+        font-size: 3.0rem;
+        letter-spacing: -0.01em;
+    }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-top: 18px;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+.hero h1 span {
+    color: #ffffff;
+}
+
+/* El contenedor ahora actúa como el "borde" exterior */
+.hero-form {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente el input y el botón */
+    background-color: #fff;
+    /* Fondo blanco para todo el conjunto */
+    border: 1px solid #000;
+    /* Aquí controlas el borde exterior */
+    max-width: 450px;
+    /* O el ancho que prefieras */
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    /* Para que las esquinas del input no se salgan si usas border-radius */
+}
+
+/* El input ya no tiene bordes propios */
+.hero-form input {
+    flex: 1;
+    /* Toma todo el espacio disponible */
+    border: none !important;
+    outline: none;
+    /* Quita el borde azul al hacer clic */
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    background: transparent;
+}
+
+/* El botón se pega al borde derecho */
+.hero-form button {
+    border: none !important;
+    background: #fff;
+    /* O el color que desees */
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+/* SVG icons en botones */
+.hero-form button svg,
+.back-btn svg,
+.submit-btn svg {
+    width: 1.15em;
+    height: 1.15em;
+    display: block;
+}
+
+.back-btn svg,
+.submit-btn svg {
+    vertical-align: middle;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Opcional: un efecto hover para el botón */
+.hero-form button:hover {
+    background: #f0f0f0;
+}
+
+/* Aviso de consentimiento pequeño para los formularios */
+.form-consent {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.65);
+    margin-top: 6px;
+    line-height: 1.2;
+    max-width: 520px;
+}
+
+@media (max-width: 768px) {
+    .form-consent {
+        font-size: 0.68rem;
+        max-width: 100%;
+    }
+}
+
+/* Position the consent outside form box and slightly below */
+.form-consent-wrap {
+    margin-top: 6px;
+    /* ensure it sits outside the white input box visually */
+    transform: translateY(6px);
+}
+
+@media (max-width: 768px) {
+    .form-consent-wrap {
+        transform: none;
+        margin-top: 8px;
+    }
+}
+
+/* CONTENIDO */
+.content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.block {
+    display: flex;
+    gap: 32px; /* ligeramente menor */
+    margin: 24px 0; /* márgenes verticales homogéneos y reducidos */
+} 
+
+/* Asegurar el primer bloque baje un poco para separarlo del hero */
+.block:first-of-type {
+    margin-top: 48px; /* aumentar separación del hero en escritorio */
+}  
+
+.block.reverse {
+    flex-direction: row-reverse;
+}
+
+.image {
+    /* Mayor proporción para que las imágenes ocupen más espacio */
+    flex: 1.6;
+    min-height: 420px; /* altura reducida para disminuir espacios en blanco */
+    /* Cover asegura que la imagen llene el área */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: flex 0.3s ease, min-height 0.3s ease;
+} 
+
+.img-1 {
+    background-image: url("images/imagendef1.webp");
+}
+
+.img-2 {
+    background-image: url("images/imagendef2.webp");
+}
+
+.img-3 {
+    background-image: url("images/imagendef3.webp");
+}
+
+.text {
+    flex: 1;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #000000;
+    font-family: 'Outfit', 'MADE Okine Sans', sans-serif;
+    font-weight: 400;
+} 
+
+.text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #000000;
+    font-family: 'MADE Okine Sans Black', sans-serif;
+    font-weight: 900;
+}
+
+/* Títulos destacados más gordos */
+.titulo-gordo {
+    font-family: 'MADE Okine Sans Black', 'MADE Okine Sans', sans-serif !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.02em;
+    font-size: 2.7rem;
+    color: #000;
+    line-height: 1.05;
+}
+
+.text span {
+    color: #000000;
+}
+
+/* Texto largo en negro total: párrafos, listas y citas */
+.content p,
+.text p,
+main p,
+article p,
+.block p,
+.content li,
+blockquote {
+    color: #000000; /* negro total */
+}
+
+/* Ajustes tipográficos para párrafos largos: compactación vertical */
+.content p,
+.text p,
+main p,
+article p,
+.block p {
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin-bottom: 12px;
+} 
+
+blockquote {
+    font-style: normal;
+    margin-bottom: 18px;
+} 
+
+blockquote span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* MANIFIESTO */
+.manifesto {
+    background: #111;
+    color: #fff;
+    padding: 60px;
+}
+
+.manifesto h3 {
+    margin-bottom: 20px;
+}
+
+/* CTA */
+.cta {
+    background: none;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para crédito del footer */
+.footer-credit {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400; /* peso regular */
+    color: #000000;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.footer-credit--second {
+    display: block; /* garantiza que quede en la línea siguiente */
+}
+
+@media (max-width: 600px) {
+    .footer-credit {
+        font-size: 1rem;
+    }
+}
+
+/* Símbolo del footer: tamaño controlado desde CSS */
+.footer-logo {
+    width: clamp(48px, 6vw, 60px);
+    height: auto;
+    display: inline-block;
+    margin-top: 6px;
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 44px;
+    }
+}
+
+.cta form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cta input {
+    padding: 12px;
+    border: none;
+    width: 250px;
+}
+
+.cta button {
+    padding: 12px 18px;
+    border: none;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Usar la fuente 'Outfit' en todos los campos y placeholders */
+input,
+textarea,
+select,
+textarea,
+.code-input,
+.hero-form input,
+.cta input {
+    font-family: 'Outfit', sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder,
+.code-input::placeholder {
+    font-family: inherit;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .block {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 0; /* márgenes verticales simétricos y reducidos en móvil */
+    }
+
+    .block:first-of-type {
+        margin-top: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Reducir padding del overlay y altura de imagen en móvil */
+    .hero-overlay {
+        padding: 24px 20px;
+    }
+
+    .image {
+        min-height: 280px;
+        flex: 1.1; /* menos prioridad en móvil */
+    }
+
+    .hero-register {
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image {
+        min-height: 320px;
+        flex: 1.1; /* menos prioridad en móvil */
+        background-size: cover;
+    }
+
+    /* Restaurar interlineado cómodo en móvil para legibilidad */
+    .content p,
+    .text p,
+    main p,
+    article p,
+    .block p {
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 100svh;
+        background: #000;
+    }
+    .hero video {
+        width: 177.77vh;
+        height: 100svh;
+        min-width: 100vw;
+        min-height: 56.25vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+    .hero-overlay {
+        padding: 32px 20px;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* TEXTO */
+    .hero-text {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding-inline: 20px;
+        box-sizing: border-box;
+        max-width: none;
+        margin-top: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.1rem;
+        line-height: 1.15;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    /* PRE-REGISTRO */
+    .hero-register {
+        position: relative;
+        margin-top: auto;
+        margin-bottom: 20px;
+        right: auto;
+        bottom: auto;
+        text-align: left;
+    }
+
+    .hero-form {
+        width: 100%;
+    }
+
+    .hero-form input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .hero-form button {
+        padding: 16px 18px;
+    }
+
+    .hero-register small {
+        text-align: left;
+    }
+}
+
+#typewriter::after {
+    content: "|";
+    margin-left: 6px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    20%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* =====================
+   DESENFOQUE DE CAPA EN TÍTULO
+===================== */
+
+.blur-title {
+    position: relative;
+    display: inline-block;
+}
+
+/* Capa desenfocada */
+.blur-layer {
+    position: absolute;
+    inset: 0;
+    color: #ffffff;
+    filter: blur(1.5px);
+    opacity: 100%;
+    z-index: 1;
+    pointer-events: none;
+    white-space: pre-wrap;
+}
+
+/* Asegurar que el texto del typewriter y su capa desenfocada estén en negrita */
+.text-layer,
+.blur-layer {
+    /* Peso controlado por CSS */
+    font-weight: 900;
+    /* Tamaño responsivo: mínimo en móvil, escala con viewport y máximo en escritorio */
+    font-size: clamp(2.8rem, 6vw, 8.5rem);
+    /* Ajuste de línea para evitar saltos con el efecto de escritura */
+    line-height: 1.05;    /* Evitar desbordes: permitir que el texto haga wrap en móviles y pantallas pequeñas */
+    white-space: pre-wrap;
+    /* Evitar que las palabras se rompan en medio; permitir quiebre solo en puntos de separación */
+    overflow-wrap: break-word;
+    word-break: normal;
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* Reducir tamaño mínimo en pantallas muy pequeñas para evitar overflow horizontal */
+@media (max-width: 480px) {
+    .text-layer,
+    .blur-layer {
+        font-size: clamp(1.4rem, 7.5vw, 2.2rem);
+        line-height: 1.08;
+    }
+
+    /* Asegurar padding lateral suficiente */
+    .hero-text {
+        padding-inline: 16px;
+        left: 0;
+    }}
+
+
+/* Texto principal */
+.text-layer {
+    position: relative;
+    z-index: 2;
+    filter: blur(2px);
+    /* Ajusta '5px' para más o menos desenfoque */
+    color: #0000;
+}
+
+
+/* Ajuste del cursor del typewriter */
+#typewriter::after {
+    content: "|";
+    margin-left: 6px;
+    animation: blink 1s infinite;
+}
+
+.thin-text {
+    font-family: 'Outfit', sans-serif;
+    /* Peso regular para 'Sé parte de' */
+    font-weight: 400;
+    /* Tamaño e interletrado: más compacto y responsive */
+    font-size: 2.95rem;
+    letter-spacing: -0.02em;
+    text-transform: none;
+}
+
+/* Responsive: ajustar 'Sé parte de' en pantallas pequeñas */
+@media (max-width: 768px) {
+    .thin-text {
+        font-size: 2.8rem;
+        letter-spacing: -0.01em;
+    }
+}
